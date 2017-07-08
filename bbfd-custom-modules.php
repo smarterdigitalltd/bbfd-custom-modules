@@ -19,8 +19,11 @@ if ( ! defined( 'WPINC' ) || ! class_exists( 'FLBuilder' ) ) {
  *
  * @since   1.0.0
  */
-define( 'BBFD_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
-define( 'BBFD_PLUGIN_URL', plugins_url( '/', __FILE__ ) );
+define( 'BBFD_PLUGIN_DIR', plugin_dir_path( __FILE__ ) ); // eg. wp-content/plugins/bbfd-custom-modules/
+define( 'BBFD_MODULES_DIR', BBFD_PLUGIN_DIR . 'modules/' ); // eg. wp-content/plugins/bbfd-custom-modules/modules
+
+define( 'BBFD_PLUGIN_URL', plugins_url( '/', __FILE__ ) ); // eg. http://mywebsite.com/wp-content/plugins/bbfd-custom-modules/
+define( 'BBFD_MODULES_URL', BBFD_PLUGIN_URL. 'modules/', __FILE__ ); // eg. http://mywebsite.com/wp-content/plugins/bbfd-custom-modules/modules/
 
 /**
  * Load modules
