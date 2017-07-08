@@ -32,4 +32,5 @@ define( 'BBFD_MODULES_URL', BBFD_PLUGIN_URL. 'modules/', __FILE__ ); // eg. http
  */
 add_action( 'init', function () {
     // We'll include our modules here
+    require_once 'modules/bbfd-typed-text/bbfd-typed-text.php';
 } );
